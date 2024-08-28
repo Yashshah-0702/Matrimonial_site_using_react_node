@@ -19,8 +19,9 @@ const signUpSchema = joi.object({
     .pattern(/^(?=.*[A-Z])(?=.*[!@#$%^&*()-_+=<>?]).{8,14}$/, "password")
     .required()
     .messages({
-      "string.pattern.base":
+      "string.pattern.name":
         "Password must contain at least one capital letter, one special character, and be between 8 and 14 characters in length",
+      "string.empty": "Password is required",
     }),
 });
 
